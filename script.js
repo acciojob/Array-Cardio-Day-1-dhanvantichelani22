@@ -1,77 +1,3 @@
-// // Get your shorts on - this is an array workout!
-// // ## Array Cardio Day 1
-
-// // Some data we can work with
-
-// const inventors = [
-//     { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
-//     { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
-//     { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
-//     { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
-//     { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
-//     { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
-//     { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
-//     { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
-//     { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
-//     { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
-//     { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
-//     { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
-// ];
-
-// const people = [
-//     'Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Lloyd', 'Beckett, Samuel', 'Blake, William', 'Berger, Ric', 'Beddoes, Mick', 'Beethoven, Ludwig',
-//     'Belloc, Hilaire', 'Begin, Menachem', 'Bellow, Saul', 'Benchley, Robert', 'Blair, Robert', 'Benenson, Peter', 'Benjamin, Walter', 'Berlin, Irving',
-//     'Benn, Tony', 'Benson, Leana', 'Bent, Silas', 'Berle, Milton', 'Berry, Halle', 'Biko, Steve', 'Beck, Glenn', 'Bergman, Ingmar', 'Black, Elk', 'Berio, Luciano',
-//     'Berne, Eric', 'Berra, Yogi', 'Berry, Wendell', 'Bevan, Aneurin', 'Ben-Gurion, David', 'Bevel, Ken', 'Biden, Joseph', 'Bennington, Chester', 'Bierce, Ambrose',
-//     'Billings, Josh', 'Birrell, Augustine', 'Blair, Tony', 'Beecher, Henry', 'Biondo, Frank'
-// ];
-
-// // Array.prototype.filter()
-// // 1. Filter the list of inventors for those who were born in the 1500's and return the filtered array
-// export function myfilter() {
-
-// }
-
-// // Array.prototype.map()
-// // 2. Give us an array of the inventor first and last names (i.e. full name)
-// // Ex: For the first inventor the full name will be 'Albert Einstein'
-// export function map() {
-
-// }
-
-
-// // Array.prototype.sort()
-// // 3. Sort the inventors by birthdate, oldest to youngest and return the sorted array
-// export function sort() {
-
-// }
-
-
-// // Array.prototype.reduce()
-// // 4. How many years did all the inventors live?
-// // Return the total number of years all the inventors lived
-// export function reduce() {
-
-// }
-
-// // 5. Sort the inventors by years lived and return the sorted array
-// export function sortbylived() {
-
-// }
-
-// // 6. sort Exercise
-// // Sort the people alphabetically by last name and return the sorted array
-// export function sortByLastName() {
-
-// }
-
-// // 7. Reduce Exercise
-// // Sum up the instances of each of these
-// const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
-
-// export function reducedSum() {
-//     // Return an object containing transports as key and its number of occurances as the key's value
-// }
 // Get your shorts on - this is an array workout!
 // ## Array Cardio Day 1
 
@@ -103,21 +29,24 @@ const people = [
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's and return the filtered array
 export function myfilter() {
-return inventors.filter(inventor=>inventor.year>=1500 && inventor.year<1600);
+   Const inventorBorn = inventor.filter((inventor) => inventor.year >= 1500 && inventor.year<1600);
+	return inventorborn;
 }
 
 // Array.prototype.map()
 // 2. Give us an array of the inventor first and last names (i.e. full name)
 // Ex: For the first inventor the full name will be 'Albert Einstein'
 export function map() {
-	return inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+    const inventorName = inventor.map((inventor) => `${inventor.first} ${inventor.last}`);
+	return inventorname;
 }
 
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest and return the sorted array
 export function sort() {
-return inventors.sort((a, b) => a.year - b.year);
+         const inventorbirth = inventors.sort((a,b) => a.year - b.year);
+	   return inventorbirth;
 }
 
 
@@ -125,29 +54,31 @@ return inventors.sort((a, b) => a.year - b.year);
 // 4. How many years did all the inventors live?
 // Return the total number of years all the inventors lived
 export function reduce() {
-
-  return inventors.reduce((total, inventor) => {
-    return total + (inventor.passed - inventor.year);
-  }, 0);
+        const inventorlives = inventors.reduce((total,inventors) => {
+			return total + (inventors.passed - inventors.year);},0);
+		    return inventorlives;
+		
 }
 
 // 5. Sort the inventors by years lived and return the sorted array
 export function sortbylived() {
-  return inventors.sort((a, b) => {
-    const aLived = a.passed - a.year;
-    const bLived = b.passed - b.year;
-    return aLived - bLived;
-  });
+             const inventorlived = inventors.sort((a,b)) => {
+				 const inventorA = a.passed - a.year;
+				 const inventorB = b.passed - b.year;
+				 return inventorB - inventorA;
+			 };
+	       return inventorlived;
 }
 
 // 6. sort Exercise
 // Sort the people alphabetically by last name and return the sorted array
 export function sortByLastName() {
-  return people.sort((a, b) => {
-    const [aLast] = a.split(', ');
-    const [bLast] = b.split(', ');
-    return aLast > bLast ? 1 : -1;
-  });
+         const peoplelastname = inventor.sort((a,b) =>{
+			 const lastnameA = a.split(' , ');
+			 const lastnameB = b.split(' , ');
+			 return lastnameA.localeCompare(lastnameB);
+			 });
+	return peoplelastname;
 }
 
 // 7. Reduce Exercise
@@ -156,11 +87,9 @@ const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bik
 
 export function reducedSum() {
     // Return an object containing transports as key and its number of occurances as the key's value
-	 return data.reduce((obj, item) => {
-    if (!obj[item]) {
-      obj[item] = 0;
-    }
-    obj[item]++;
-    return obj;
+	const transportCounts = data.reduce((count, transport) => {
+    count[transport] = (count[transport] || 0) + 1;
+    return count;
   }, {});
+  return transportCounts;
 }
